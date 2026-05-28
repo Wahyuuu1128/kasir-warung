@@ -7,52 +7,214 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+# Kasir Warung
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Aplikasi kasir digital berbasis web yang dikembangkan menggunakan Laravel dengan antarmuka modern, responsif, dan interaktif.
+Project ini dibuat untuk membantu proses transaksi penjualan pada warung atau toko kecil dengan sistem pengelolaan produk dan transaksi yang lebih efisien.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Tentang Project
 
-## Learning Laravel
+Kasir Warung merupakan aplikasi Point of Sale (POS) sederhana yang menyediakan fitur manajemen produk, kategori, transaksi kasir, hingga cetak struk dalam format PDF.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Aplikasi ini dirancang menggunakan Laravel sebagai backend, Tailwind CSS untuk tampilan antarmuka, serta Alpine JS untuk meningkatkan interaktivitas pada halaman kasir dan transaksi.
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+## Fitur Utama
 
-## Agentic Development
+### Manajemen Produk
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+* Menambahkan produk baru
+* Mengedit data produk
+* Menghapus produk
+* Upload gambar produk
+* Menampilkan daftar produk
 
-```bash
-composer require laravel/boost --dev
+### Manajemen Kategori
 
-php artisan boost:install
+* Menambahkan kategori produk
+* Mengedit kategori
+* Menghapus kategori
+
+### Sistem Kasir
+
+* Halaman transaksi kasir
+* Keranjang belanja
+* Perhitungan total otomatis
+* Perhitungan kembalian otomatis
+* Input jumlah pembayaran
+* Penyimpanan data transaksi
+
+### Struk PDF
+
+* Generate struk transaksi
+* Export struk ke format PDF
+* Tampilan struk sederhana dan rapi
+
+### Tampilan
+
+* Responsive design
+* UI modern menggunakan Tailwind CSS
+* Interaktif menggunakan Alpine JS
+* Layout dashboard sederhana dan nyaman digunakan
+
+---
+
+## Teknologi yang Digunakan
+
+| Teknologi      | Keterangan              |
+| -------------- | ----------------------- |
+| Laravel        | Backend Framework       |
+| Tailwind CSS   | Styling UI              |
+| Alpine JS      | Interaktivitas Frontend |
+| MySQL          | Database                |
+| Vite           | Asset Bundler           |
+| Blade Template | Template Engine Laravel |
+
+---
+
+## Struktur Halaman
+
+### Produk
+
+```text id="ev84wb"
+resources/views/products
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+### Kategori
 
-## Contributing
+```text id="6vny5d"
+resources/views/categories
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Kasir / POS
 
-## Code of Conduct
+```text id="pp4yuv"
+resources/views/pos
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Dashboard
 
-## Security Vulnerabilities
+```text id="y8u5vv"
+resources/views/dashboard.blade.php
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## Instalasi Project
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Clone Repository
+
+```bash id="c1cijg"
+git clone https://github.com/Wahyuuu1128/kasir-warung.git
+```
+
+### Masuk ke Folder Project
+
+```bash id="pt7j2z"
+cd kasir-warung
+```
+
+### Install Dependency Backend
+
+```bash id="m5mif0"
+composer install
+```
+
+### Install Dependency Frontend
+
+```bash id="7lzg7i"
+npm install
+```
+
+### Copy File Environment
+
+```bash id="jv1nlg"
+cp .env.example .env
+```
+
+### Generate Application Key
+
+```bash id="lv1rga"
+php artisan key:generate
+```
+
+### Konfigurasi Database
+
+Atur database pada file `.env`
+
+```env id="n4kefm"
+DB_DATABASE=kasir_warung
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### Jalankan Migration
+
+```bash id="hprj71"
+php artisan migrate
+```
+
+### Menjalankan Project
+
+```bash id="h9g5to"
+php artisan serve
+```
+
+### Menjalankan Vite
+
+```bash id="1pfot7"
+npm run dev
+```
+
+---
+
+## Tampilan Aplikasi
+
+Berikut beberapa tampilan utama pada aplikasi:
+
+* Dashboard
+* Manajemen Produk
+* Manajemen Kategori
+* Halaman Kasir
+* Cetak Struk PDF
+
+> Screenshot aplikasi dapat ditambahkan pada repository ini.
+
+---
+
+## Responsive Design
+
+Aplikasi telah dioptimalkan untuk berbagai ukuran layar:
+
+* Desktop
+* Tablet
+* Mobile
+
+---
+
+## Pengembangan Selanjutnya
+
+Beberapa fitur yang dapat dikembangkan lebih lanjut:
+
+* User tLogin
+* Role Admin dan Kasir
+* Laporan Penjualan
+* Grafik Statistik
+* Scan Barcode
+* Cetak Thermal Printer
+* Export Excel
+* Export PDF
+
+---
+
+## Developer
+
+Dikembangkan oleh:
+
+**Wahyuuu**
+
+
+---
