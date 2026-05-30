@@ -214,7 +214,5 @@ Beberapa fitur yang dapat dikembangkan lebih lanjut:
 
 Dikembangkan oleh:
 
-**Wahyuuu**
+**Wahyu Rahmat Ilahi**
 
-
----
